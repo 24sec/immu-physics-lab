@@ -1,0 +1,10 @@
+<% @labs.each do |lab| %>
+  <h1><%= link_to lab.title, lab_path(lab) %></h1>
+  <ul>
+    <% lab.articles.each do |article| %>
+      <li>
+        <%= link_to article.title, article_path(article) %>
+      </li>
+    <% end %>
+  </ul>
+<% end %>

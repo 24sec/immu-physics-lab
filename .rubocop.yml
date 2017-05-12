@@ -1,0 +1,60 @@
+AllCops:
+  TargetRubyVersion: 2.4
+  Include:
+    - bin/*
+    - config.ru
+    - Rakefile
+  Exclude:
+    - db/schema.rb
+    - tmp/**/*
+    - vendor/gems/**/*
+
+Metrics/AbcSize:
+  Enabled: false
+
+Metrics/ClassLength:
+  Exclude:
+    - script/*
+    - test/**/*
+
+Metrics/CyclomaticComplexity:
+  Max: 20
+
+Metrics/LineLength:
+  Max: 120
+  Exclude:
+    - db/migrate/*
+    - script/*
+
+Metrics/MethodLength:
+  Max: 30
+  Exclude:
+    - db/migrate/*
+    - app/serializers/*
+
+Metrics/PerceivedComplexity:
+  Max: 20
+
+Rails:
+  Enabled: true
+
+Style/ClassAndModuleChildren:
+  Exclude:
+    - test/**/*
+
+Style/Documentation:
+  Enabled: false
+
+Style/ExtraSpacing:
+  Exclude:
+    - db/migrate/*
+
+Style/FormatString:
+  EnforcedStyle: sprintf
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+Style/SymbolProc:
+  Exclude:
+    - db/migrate/*

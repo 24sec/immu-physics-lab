@@ -1,0 +1,7 @@
+<%= form_for @article, url: lab_articles_path do |f| %>
+<%= f.submit t('publish_article'), class: 'btn btn-primary', name: 'publish' %>
+<%= f.submit t('save_draft'), class: 'btn btn-default', name: 'draft'%>
+<%= f.text_field :title %>
+<%= f.text_area :body, :class => "tinymce", :rows => 40, :cols => 120 %>
+<% end %>
+<%= tinymce %>
